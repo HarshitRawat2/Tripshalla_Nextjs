@@ -81,6 +81,28 @@ export default function Tour2() {
   return (
     <main className="bg-[#FAFAFA]">
       {/* 1. HEADER - Bungy Style */}
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": pkg.name,
+    "description": pkg.tagline,
+    "url": `https://www.tripshalla.in/bungy/${slug}`,
+    "image": pkg.media[0]?.media_url,
+    "offers": {
+      "@type": "Offer",
+      "price": pkg.price,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Tripshalla",
+      "url": "https://www.tripshalla.in"
+    }
+  })}}
+/>
 
       <Header
         variant="tour"

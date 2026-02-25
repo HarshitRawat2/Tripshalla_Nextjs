@@ -437,6 +437,33 @@ export default function Tour() {
         badges={["5 Days", "12,500 ft", "Easy–Moderate"]}
         bgImage="/src/assets/1.jpg"
       /> */}
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": pkg.name,
+    "description": pkg.tagline,
+    "url": `https://www.tripshalla.in/trek/${pkg.slug}`,
+    "image": heroImage,
+    "offers": {
+      "@type": "Offer",
+      "price": bestPricing?.final_price,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": pkg.rating ? {
+      "@type": "AggregateRating",
+      "ratingValue": pkg.rating,
+      "reviewCount": pkg.review_count || 10
+    } : undefined,
+    "provider": {
+      "@type": "Organization",
+      "name": "Tripshalla",
+      "url": "https://www.tripshalla.in"
+    }
+  })}}
+/>
 
       {pkg && (
         <Header

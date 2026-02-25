@@ -291,6 +291,28 @@ export default function Tour3() {
   return (
     <main className="bg-[#FAFAFA]">
       {/* 1️⃣ HEADER */}
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": pkg.name,
+    "description": pkg.tagline,
+    "url": `https://www.tripshalla.in/raftings/${slug}`,
+    "image": pkg.media[0]?.media_url,
+    "offers": {
+      "@type": "Offer",
+      "price": bestPricing?.final_price || pkg.price,
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Tripshalla",
+      "url": "https://www.tripshalla.in"
+    }
+  })}}
+/>
       <Header
         variant="tour"
         title={pkg.name}
