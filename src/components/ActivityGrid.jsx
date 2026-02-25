@@ -289,7 +289,7 @@ const path = pathname.toLowerCase();
   //       })
   //     : BUNGY_PACKAGES;
 
-    const isBungeeMain = pathname === "/bungee";
+   
   const isRaftingMain = pathname === "/raftings";
 
   const basePackages = isRafting
@@ -367,6 +367,7 @@ const path = pathname.toLowerCase();
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -10 }}
+             whileTap={{ scale: 0.97 }}
             className="relative rounded-[2.5rem] overflow-hidden shadow-2xl cursor-pointer group h-[520px]"
           >
             {/* Image & Overlays */}

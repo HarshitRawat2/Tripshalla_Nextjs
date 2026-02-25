@@ -1,2 +1,7 @@
 import CopyrightPolicy from '../../components/CopyrightPolicy'
-export default function Page() { return <CopyrightPolicy /> }
+import Header3 from '../../components/Header3'
+export default function Page() { return (
+<>
+<Header3/>
+<CopyrightPolicy /></>
+) }
