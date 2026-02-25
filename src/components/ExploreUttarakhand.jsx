@@ -54,6 +54,7 @@ const router = useRouter();
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+        
           className="text-center mb-14"
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800">
@@ -80,6 +81,7 @@ const router = useRouter();
                 transition={{ duration: 0.4 }}
                 // PREMIMUM HOVER (Matches your favorite style)
                 whileHover={{ y: -10, scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
                onClick={() => router.push(cat.slug)}
                 className="group cursor-pointer rounded-3xl border border-slate-200 p-8 hover:border-orange-400 hover:shadow-xl transition-shadow duration-300 bg-white"
               >
